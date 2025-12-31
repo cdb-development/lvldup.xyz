@@ -1,10 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" data-theme="dark">
 <head>
-    <title>My Custom Site</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LVLDUP | Absolute Peak</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <h1>Welcome to my Dynadt Website!</h1>
+
+    <div id="loader"><div class="loader-content"><div class="loader-circle"></div><p>LVLDUP CORE</p></div></div>
+
+    <div id="command-palette" class="hidden">
+        <div class="palette-box">
+            <input type="text" id="palette-input" placeholder="Search commands... (try 'theme' or 'home')">
+            <div class="palette-results">
+                <div class="result-item" onclick="toggleTheme()">Toggle Dark/Light Mode</div>
+                <div class="result-item" onclick="window.location.href='#work'">Go to Work</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="audio-control mag-element" onclick="toggleMusic()">
+        <i class="fas fa-volume-mute" id="audio-icon"></i>
+        <span>LO-FI ENGINE</span>
+        <audio id="bg-music" loop src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+    </div>
+
+    <div id="tsparticles"></div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <nav class="navbar">
+        <div class="logo">LVLD<span>UP</span></div>
+        <div class="nav-links">
+            <span class="cmd-hint">Press <b>Ctrl + K</b></span>
+            <button id="theme-toggle" class="mag-element"><i class="fas fa-moon"></i></button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="badge">Version 4.0 Live</div>
+        <h1 class="typewriter-container">
+            The Art of <span id="typewriter" class="gradient-text"></span>
+        </h1>
+        <p>Command-driven, 3D-accelerated, and fully automated.</p>
+    </section>
+
+    <section class="project-grid">
+        <div class="project-card tilt-card" data-tilt>
+            <div class="inner-card">
+                <i class="fas fa-terminal"></i>
+                <h3>Command Palette</h3>
+                <p>Press Ctrl+K to trigger the internal OS.</p>
+            </div>
+        </div>
+        <div class="project-card tilt-card" data-tilt>
+            <div class="inner-card">
+                <i class="fas fa-headphones"></i>
+                <h3>Audio Engine</h3>
+                <p>Integrated ambient soundscapes.</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.0.3/tsparticles.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
